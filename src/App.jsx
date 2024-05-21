@@ -6,7 +6,7 @@ function App() {
  
 
   return (
-    <div className="flex items-center justify-center h-screen bg-blue-50">
+    <div className="flex items-center justify-center h-screen bg-yellow-500">
     <div>
       <Signup/>
     </div>

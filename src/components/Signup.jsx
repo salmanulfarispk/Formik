@@ -25,10 +25,10 @@ function Signup() {
       lastName: '',
       email: '',
     },
-    validationSchema: validationSchema,
+    validationSchema: validationSchema,  //validating here
     onSubmit: async (values) => {
       try {
-        const response = await axios.post('https://api/user/signup', values); //dummy
+        const response = await axios.post('/api/user/signup', values); //dummy
         console.log('Form submission successful:', response.data);
       } catch (error) {
         console.error('Form submission error:', error);
@@ -88,7 +88,7 @@ function Signup() {
         </div>
 
         <div className="flex justify-end mt-2">
-          <button type="submit" className="border p-1 rounded-lg bg-slate-300 text-white hover:bg-slate-400">
+          <button type="submit" className="border p-1 rounded-lg bg-black text-white hover:bg-gray-800">
             Submit
           </button>
         </div>
