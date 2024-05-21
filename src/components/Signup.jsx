@@ -6,15 +6,20 @@ function Signup() {
     initialValues: {
       firstName: '',
       lastname: '',
-    }})
-   https://github.com/salmanulfarispk/New_.git
-    console.log(formik.values);
+      email:'',
+    },
+    onSubmit: (values)=>{
+        console.log(values);
+    }
+
+})
+
+    
   return (
     <>
-      <form>
+      <form onSubmit={formik.handleSubmit}>
         <div>
           <input
-            id="first-name"
             type="text"
             name="firstName"
             placeholder="Enter first name"
@@ -26,11 +31,20 @@ function Signup() {
 
         <div>
           <input
-            id="last-name"
             type="text"
             name="lastname"
             placeholder="Enter last name"
             value={formik.values.lastname}
+            onChange={formik.handleChange}
+            className="border p-2 rounded-md"
+          />
+        </div>
+        <div>
+          <input
+            type="email"
+            name="email"
+            placeholder="Enter email"
+            value={formik.values.email}
             onChange={formik.handleChange}
             className="border p-2 rounded-md"
           />
